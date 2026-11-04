@@ -124,4 +124,4 @@ The compiler and runtime should be compatible with the installed JavaFX SDK.
 
 - Weather history is currently stored in memory and is lost when the application closes.
 - The API key constant is retained for the planned weather-service integration; do not commit real credentials to a public repository.
-- The background image is loaded from `resources/background.jpg` when that file is available.
+- The application uses a solid light-blue background and does not require image resources.

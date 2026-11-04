@@ -6,8 +6,8 @@ import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.image.Image;
 import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -153,13 +153,9 @@ historyTable.getColumns().addAll(
         grid.setVgap(20);
         grid.setPadding(new Insets(20));
 
-        // Background
-        BackgroundImage backgroundImage = new BackgroundImage(
-            new Image("file:resources/background.jpg"),
-            BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT,
-            BackgroundPosition.CENTER, BackgroundSize.DEFAULT
-        );
-        grid.setBackground(new Background(backgroundImage));
+        grid.setBackground(new Background(
+            new BackgroundFill(Color.LIGHTBLUE, CornerRadii.EMPTY, Insets.EMPTY)
+        ));
 
         BorderPane root = new BorderPane();
         root.setCenter(grid);
